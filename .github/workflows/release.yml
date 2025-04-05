@@ -1,0 +1,51 @@
+name: Create Release
+
+# 触发条件：当推送到 main 分支且 manifest.json 有更改时
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'manifest.json'
+
+# 权限：需要写入 Release
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史以便读取提交信息
+
+      # 读取 manifest.json 中的 version
+      - name: Get version from manifest.json
+        id: get_version
+        run: |
+          VERSION=$(jq -r '.version' manifest.json)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      # 获取最近的提交信息作为描述
+      - name: Get commit message
+        id: get_commit
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "COMMIT_MSG<<EOF" >> $GITHUB_ENV
+          echo "$COMMIT_MSG" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      # 创建 Release
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.VERSION }}
+          release_name: ${{ env.VERSION }}
+          body: ${{ env.COMMIT_MSG }}
+          draft: false
+          prerelease: false
