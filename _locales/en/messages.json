@@ -1,0 +1,26 @@
+{
+	"extensionName": {
+		"message": "Custom No History"
+	},
+	"extensionDescription": {
+		"message": "Selectively prevent specific webpages from leaving a browsing history in the browser based on the user-configured domain list."
+	},
+	"popupTitle": {
+		"message": "Websites to Exclude from History"
+	},
+	"popupDescription1": {
+		"message": "To block all subdomains under a domain, simply enter the root domain, e.g., tsukistar.cc. To specify a particular subdomain, enter the full domain, e.g., blog.tsukistar.cc."
+	},
+	"popupDescription2": {
+		"message": "When entering multiple domains, use one per line, separated by a comma."
+	},
+	"popupDescription3": {
+		"message": "Entered domains will be saved automatically. Note: If the domain format is incorrect, it will not be saved, and a prompt will appear."
+	},
+	"errorMessage": {
+		"message": "Input format error, please check."
+	},
+	"saveMessage": {
+		"message": "Saved successfully"
+	}
+}

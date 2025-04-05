@@ -2,17 +2,17 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>配置无历史记录域名</title>
+  <title data-i18n="popupTitle"></title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>无需记录浏览记录的网页</h1>
-    <p>若想屏蔽某一域名下的所有子域，仅输入根域名即可，例如 tsukistar.cc，若想指定特定子域名，请将域名输入完整，例如 blog.tsukistar.cc。</p>
-    <p>输入多个域名时，每行一个，以英文逗号分隔。</p>
-    <p>输入后的域名会自动保存，注意：若输入的域名格式错误，将无法保存，会有提示信息。</p>
-    <div id="save-message" class="success-message hidden">保存成功</div>
-    <div id="error-message" class="error-message hidden">输入格式错误，请检查</div>
+    <h1 data-i18n="popupTitle"></h1>
+    <p data-i18n="popupDescription1"></p>
+    <p data-i18n="popupDescription2"></p>
+    <p data-i18n="popupDescription3"></p>
+    <div id="error-message" class="error-message hidden" data-i18n="errorMessage"></div>
+    <div id="save-message" class="success-message hidden" data-i18n="saveMessage"></div>
     <textarea id="domainList" placeholder="tsukistar.cc,
 vtubers.win," rows="5"></textarea>
   </div>

@@ -1,0 +1,26 @@
+{
+	"extensionName": {
+		"message": "自定义无痕浏览工具"
+	},
+	"extensionDescription": {
+		"message": "根据用户配置的域名清单，选择性阻止特定网页在浏览器中留下历史记录。"
+	},
+	"popupTitle": {
+		"message": "无需记录浏览记录的网页"
+	},
+	"popupDescription1": {
+		"message": "若想屏蔽某一域名下的所有子域，仅输入根域名即可，例如 tsukistar.cc，若想指定特定子域名，请将域名输入完整，例如 blog.tsukistar.cc。"
+	},
+    "popupDescription2": {
+		"message": "输入多个域名时，每行一个，以英文逗号分隔。"
+	},
+    "popupDescription3": {
+		"message": "输入后的域名会自动保存，注意：若输入的域名格式错误，将无法保存，会有提示信息。"
+	},
+	"errorMessage": {
+		"message": "输入格式错误，请检查"
+	},
+	"saveMessage": {
+		"message": "保存成功"
+	}
+}

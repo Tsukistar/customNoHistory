@@ -1,25 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "Custom No History",
-    "version": "1.0",
-    "description": "根据用户配置的域名清单，选择性阻止特定网页的历史记录",
-    "permissions": [
-      "history",
-      "webRequest",
-      "storage"
-    ],
-    "host_permissions": [
-      "<all_urls>"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-      }
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.0",
+  "default_locale": "en",
+  "permissions": [
+    "history",
+    "webRequest",
+    "storage",
+    "tabs",
+    "browsingData"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
     }
   }
+}
